@@ -1,0 +1,408 @@
+:root { 
+    --primary : #18C729;
+    --secondary : #FEF500;
+    --tertiary : #D9F8DC;
+}
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+    display: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .comment-count{
+    font-size: 14px;
+    width: 5%;
+    display: inline-block;
+    float: right;
+    margin-top: 1%;
+    font-weight: bold;
+    margin-left: 2%;
+    text-align: center;
+  }
+body{
+    text-align: center;
+    padding: 0px;
+    background : linear-gradient(180deg, #18C729 -34.28%, #FEF500 132.78%);
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+#logo{
+    width:50%;
+    margin:auto;
+}
+#nav-grid{
+    display: grid;
+    margin: auto;
+    margin-top: 3%;
+    width: 95%;
+    text-align: center;
+    grid-template-columns: 10% 80% 10%;
+    padding:3% 0%;
+}
+#add-sign{
+    width: 30px;
+    height: 30px;
+    margin : auto;
+    transition: all 1s;
+}
+#add-sign:hover{
+    cursor: pointer;
+}
+#home-sign{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-left: 2px;
+    transition: all 1s;
+}
+#empty-message{
+    display: none;
+    font-size: 25px;
+    width: 85%;
+    color: var(--tertiary);
+    margin: auto;
+    position: relative;
+    margin-top: 50%;
+    z-index: 500;
+    font-weight: bold;
+    text-align: center;
+}
+#message-grid{
+    display: grid;
+    width:80%;
+    position: relative;
+    text-align: left;
+    margin: auto;
+    grid-row-gap: 30px;
+    grid-template-columns: 100%;
+    margin: 10% auto;
+}
+.message-holder{
+    background-color: var(--tertiary);
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    padding:20px 30px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.message-name{
+    font-weight: 800;
+    font-size:12px;
+    margin-bottom: 10px;
+}
+.message-content{
+    font-size: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Lato';
+}
+.message-date{
+    font-size: 10px;
+    margin-right:0px;
+    display: inline-block;
+    width: 50%;
+    color: #848484;
+}
+#entry-form{
+    text-align: left;
+    width: 70%;
+    padding:3% 8%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+    background-color: var(--tertiary);
+    position: relative;
+    z-index: 500;
+    border-radius: 20px;
+    margin: auto;
+    margin: 10% auto;
+    transition: margin 1s;
+}
+label{
+    color: black;
+    font-weight: bold;
+    font-size:12px;
+}
+input, textarea{
+    width:89%;
+    max-width: 89%;
+    min-width:89%;
+    color:black!important;
+    font-weight: bold;
+    font-size:18px;
+    background-color: transparent;
+    margin: 2% 0% 10% 0%;
+    padding:0% 5%;
+    border: 2px black solid;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+#disclaimer{
+    width:89%;
+    margin-left:7%;
+    color:black;
+    margin-top:0px;
+    font-size:small;
+    font-weight:300;
+    margin-bottom: 30px;
+}
+input, textarea:focus { 
+    outline: none !important;
+    border-color: black;
+    box-shadow: 0 0 0px #719ECE;
+}
+#submit{
+    width: 70% !important;;
+    margin-left: 15%;
+    color: black;
+    font-weight: bold;
+    padding:5% 0%;
+    border: none;
+    text-align: center;
+    border-radius: 20px;;
+    background-color: var(--tertiary);
+    font-family: 'Montserrat', sans-serif;
+}
+#name{
+    height:30px;
+}
+#message{
+    height:200px;
+    padding-top:2%;
+    font-weight:normal;
+}
+.chars-left{
+    color: black;
+    font-weight: normal;
+    float: right;
+    font-size:12px;
+    margin-top: -25px;
+}
+.small-icon{
+    width:24px;
+    float: right;
+    margin-right:5px;
+}
+.entry-form-reply{
+    font-size: 12px;
+    margin-top: 25px;
+    border-top:1px solid black;
+    padding-top:10%;
+    color:black;
+}
+.message-reply{
+    height:150px;
+    font-weight:500;
+    color: black !important;
+    font-weight: 500;
+    font-family: 'Lato';
+    font-size:10px;
+    border: black 1px solid;
+    padding-top:3%;
+}
+.name-reply{
+    height:30px;
+    font-weight: 800;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: black!important;
+}
+.submit-reply{
+    width:15%;
+    margin-left: 42.5%;
+}
+.reply-input,.reply-block{
+    display: none;
+}
+.reply-block{
+    margin-top: 5%;
+    grid-template-columns: 100%;
+}
+.reply-block > .message-name{
+    border-top: 1px solid black;
+    padding-top: 7%;
+}
+.reply-block > .message-date{
+margin-bottom: 7%;;
+}
+.reply-input{
+    height:min-content;
+}
+.name-reply,.message-reply:focus{
+    border-color: black!important;
+}
+.entry-form-reply > label{
+    color: inherit!important;
+    font-family: inherit;
+    font-size: inherit;
+}
+.entry-form-reply > .chars-left{
+    color : inherit;
+    font-weight:400;
+    margin-top:-5px;
+    color:#848484;
+    font-size:10px;
+}
+.entry-form-reply > label{
+    font-weight:800;
+}
+.entry-form-reply > input{
+    border: black 1px solid;
+}
+#thank-you-message{
+    display: none;
+    width: 66%;
+    background: var(--tertiary);
+    color: black;
+    position: absolute;
+    margin: auto;
+    margin-left: 10%;
+    margin-top: 3%;
+    top: 20vh;
+    text-align: center;
+    grid-template-columns: 100%;
+    padding: 2% 7%;
+    padding-bottom: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.thank-you-logo{
+    width: 60%;
+    margin: auto;
+}
+.thank-you-text{
+font-weight:700;
+}
+.hidden-replies > .small-icon{
+    display: none;
+}
+.hidden-replies > .comment-count{
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    #nav-grid{
+        width:95%;
+        margin-top: 1%;
+        padding-top: 10px;
+    }
+    #logo{
+        width: 300px;
+    }
+    #add-sign,#home-sign{
+        width: 50px;
+        height: 50px;
+    }
+    #thank-you-message{
+        display: none;
+        margin-bottom: 50px;
+        width: 26%;
+        background: var(--tertiary);
+        color: black;
+        margin: auto;
+        margin-left: 33.5%;
+        margin-top: 3%;
+        top: 20vh;
+        margin-bottom: 50px;
+        text-align: center;
+        grid-template-columns: 100%;
+        padding: 1% 5%;
+        padding-bottom: 4%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+    #entry-form{
+        margin-top:2%;
+        width: 30%;
+    }
+    #entry-form > input{
+        width:auto;
+        position: relative;
+        margin-left: 0%;
+        margin-bottom: 5%;
+    }
+    #entry-form > textarea{
+        width: 84%;
+        position: relative;
+        margin-left: 0%;
+        margin-bottom: 5%;
+    }
+    #disclaimer{
+        width:100%;
+        margin-left: 0%;
+        margin-top: 20px;
+    }
+    label{
+        margin-left: 0%;
+    }
+    #message{
+        height: 190px;
+    }
+    #submit{
+        width: 30% !important;
+        padding:2% 0%;
+        margin-left: 35%;
+    }
+    #submit:hover{
+        cursor:pointer;
+    }
+    #empty-message{
+        font-size: 45px;
+        margin-top: 10%;
+    }
+    .message-holder{
+        height:min-content;
+        width:30%;
+        display: grid;
+        transition: all 2s;
+        grid-template-columns: 100%;
+        padding:3% 5%;
+        margin: 10px auto;
+    }
+    #message-grid{
+        /*grid-template-columns: 45% 45%;
+        column-gap: 10%;
+        grid-template-rows:1fr auto;*/
+        display: flex;
+        height: auto;
+        margin-top: 0px;
+        top:5%;
+        padding-bottom: 40px;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: center;
+    }
+    .message-name{
+        font-size: 16px;
+    }
+    .message-content{
+        font-size: 14px;
+    }
+    .message-date{
+        font-size: 14px;
+    }
+    .chars-left{
+        margin-top: -2.5%;
+        margin-right: 5%;
+    }
+    .entry-form-reply > textarea{
+        font-size:14px;
+        width: 100%,  !important;;
+    }
+    .entry-form-reply > input{
+        font-size:16px;
+    }
+    .entry-form-reply > label,input,textarea{
+        margin-left: 0%;
+    }
+    .entry-form-reply > .chars-left{
+        margin-right: 2%;
+    }
+}
